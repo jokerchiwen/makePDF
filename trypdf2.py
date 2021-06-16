@@ -12,6 +12,7 @@ from reportlab.graphics import renderPDF
 import sys
 from PIL import Image
 
+
 def drawLineString(x,y,fnt,sze,strr,file) :  #列印字串
     file.setFont(fnt,sze)
     file.drawString(x,y,strr)
@@ -33,7 +34,6 @@ def drawLine(x,y,x2,y2,width,file) :
     file.line(x,y,x2,y2)
     print('done line')
 
-
 def drawimage(x,y,x2,y2,image,file) :
     img = Image.open(image)
     w = img.width       
@@ -47,7 +47,6 @@ def drawimage(x,y,x2,y2,image,file) :
         file.drawImage(image,x,y,width=wx, height=h*wx/w)
         print('done image 以寬')
     
-
 
 
 
